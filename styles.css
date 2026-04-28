@@ -1209,7 +1209,17 @@ a.contact-card:hover .contact-card__hint {
   .contact__cta { flex-direction: column; align-items: stretch; }
   .contact__cta .btn { width: 100%; }
 
-  .trust-bar__inner { justify-content: flex-start; gap: 16px; }
+  .trust-bar__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+    justify-items: start;
+  }
+  .trust-bar__inner .trust-item:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+  }
 
   .footer__inner { grid-template-columns: 1fr; gap: 40px; }
   .footer__links { grid-template-columns: repeat(2, 1fr); gap: 32px; }
