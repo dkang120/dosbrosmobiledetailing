@@ -286,6 +286,7 @@ ul { list-style: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 70%;
   transition: transform 8s ease;
 }
 .hero__img-frame:hover img { transform: scale(1.04); }
@@ -549,9 +550,28 @@ ul { list-style: none; }
 ═══════════════════════════ */
 .packages { background: var(--black); }
 
+.pkg-category-label {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+.pkg-category-label .section-eyebrow {
+  margin: 0;
+  white-space: nowrap;
+}
+.pkg-category-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.2;
+}
+
 .packages__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-bottom: 40px;
 }
